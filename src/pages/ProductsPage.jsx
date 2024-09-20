@@ -13,7 +13,7 @@ import {
 } from "../helper/helper";
 import { useSearchParams } from "react-router-dom";
 import SearchBox from "../components/SearchBox";
-import Sidbar from "../components/Sidbar";
+import Sidbar from "../components/Sidebar";
 
 function ProductsPage() {
   const products = useProducts();
