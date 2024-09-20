@@ -5,7 +5,6 @@ import Loader from "../components/Loader";
 import { useProducts } from "../context/ProductContext";
 
 import style from "./productPage.module.css";
-import { FaListUl } from "react-icons/fa";
 import {
   createQueryObject,
   filterProducts,
@@ -18,7 +17,6 @@ import Sidbar from "../components/Sidbar";
 
 function ProductsPage() {
   const products = useProducts();
-  console.log(products);
 
   const [displayed, setDisplayed] = useState([]);
   const [search, setSearch] = useState("");
@@ -51,7 +49,7 @@ function ProductsPage() {
             <Card key={p.id} data={p} />
           ))}
         </div>
-        <Sidbar setQuery={setQuery} createQueryObject={createQueryObject} />
+        <Sidbar setQuery={setQuery} query={query} />
       </div>
     </>
   );
