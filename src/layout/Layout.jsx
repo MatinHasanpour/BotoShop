@@ -16,7 +16,7 @@ function Layout({ children }) {
         <Link to="/checkout">
           <div>
             <PiShoppingCartSimpleBold />
-            <span> {!!state.itemsCounter} </span>
+             <span> {state.itemsCounter} </span>
           </div>
         </Link>
       </header>
