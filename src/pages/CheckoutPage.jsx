@@ -4,6 +4,8 @@ import { useCart } from "../context/CartContext";
 
 import { MdRemoveShoppingCart } from "react-icons/md";
 
+import style from "../pages/CheckOutPage.module.css";
+
 function CheckoutPage() {
   const [state, dispatch] = useCart();
 
@@ -11,9 +13,17 @@ function CheckoutPage() {
     dispatch({ type, payload });
   };
 
+  if (!!state.itemsCounter) {
+    return (
+      <div>
+        <p>Empty</p>
+      </div>
+    );
+  }
+
   return (
     <div>
-      <BasketSidebar state={state} />
+      <BasketSidebar state={state} clickHandler={clickHandler} />
       <div>
         {state.selectedItems.map((product) => (
           <BasketCard

@@ -16,14 +16,14 @@ function Layout({ children }) {
         <Link to="/checkout">
           <div>
             <PiShoppingCartSimpleBold />
-             <span> {state.itemsCounter} </span>
+            <span> {state.itemsCounter} </span>
           </div>
         </Link>
       </header>
       {children}
       <footer className={style.footer}>
         <p>
-          Developed By Matin with <FaHeartPulse />
+          Developed By Matin with <FaHeartPulse color="#ffc3b8" />
         </p>
       </footer>
     </>

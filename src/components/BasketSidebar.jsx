@@ -2,7 +2,7 @@ import { BsPatchCheck } from "react-icons/bs";
 import { FaHashtag } from "react-icons/fa";
 import { TbChecklist } from "react-icons/tb";
 
-function BasketSidebar() {
+function BasketSidebar({ state, clickHandler }) {
   return (
     <>
       <div>
@@ -20,6 +20,7 @@ function BasketSidebar() {
         <p>Status:</p>
         <span>{state.checkout && "Pendeng..."}</span>
       </div>
+      <button onClick={() => clickHandler("CHECKOUT")}>CheckOut</button>
     </>
   );
 }
